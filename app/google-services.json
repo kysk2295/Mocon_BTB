@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "564035478432",
+    "firebase_url": "https://moconbtb.firebaseio.com",
+    "project_id": "moconbtb",
+    "storage_bucket": "moconbtb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564035478432:android:713cc517e24f3136",
+        "android_client_info": {
+          "package_name": "com.kys.lg.mocon_btb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564035478432-isequg6d2li8m96dj545p1o0jhlpkc8h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kys.lg.mocon_btb",
+            "certificate_hash": "1166e4d88e3480db891a57b2f12c79f2db320b14"
+          }
+        },
+        {
+          "client_id": "564035478432-9stftv0f8nf89hc2j873gqssic291nkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe0fTOFFU--sbp-hgjeOvHpfHLfjY0ZO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564035478432-9stftv0f8nf89hc2j873gqssic291nkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

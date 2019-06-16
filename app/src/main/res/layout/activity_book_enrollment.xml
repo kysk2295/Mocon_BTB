@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    android:orientation="vertical"
+    tools:context=".BookEnrollment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#F3F3F3"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F3F3F3"
+            android:text="취소"
+            android:textColor="#3488C9" />
+
+        <Button
+            android:id="@+id/btn_enrollButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F3F3F3"
+            android:text="등록"
+            android:textColor="#3488C9" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_pictureEnroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:src="@drawable/camera" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="제목"
+        android:textColor="#323232"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="설정 안 함"
+        android:textColor="#3488C9" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_marginTop="5dp"
+        android:background="#E4E4E4" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="저자"
+        android:textColor="#323232"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_authorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="설정 안 함"
+        android:textColor="#3488C9" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_marginTop="5dp"
+        android:background="#E4E4E4" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="장르"
+        android:textColor="#323232"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_janruText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="설정 안 함"
+        android:textColor="#3488C9" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_marginTop="5dp"
+        android:background="#E4E4E4" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="출판사"
+        android:textColor="#323232"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_publisherText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="설정 안 함"
+        android:textColor="#3488C9" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_marginTop="5dp"
+        android:background="#E4E4E4" />
+
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="genre">
+        <item>좋아하는 책 장르</item>
+        <item>건강</item>
+        <item>과학</item>
+        <item>수학</item>
+        <item>만화</item>
+        <item>소설</item>
+        <item>아동 도서</item>
+        <item>여행</item>
+        <item>역사</item>
+        <item>예술</item>
+        <item>외국어</item>
+        <item>요리</item>
+        <item>자서전</item>
+        <item>정치</item>
+        <item>종교</item>
+    </string-array>
+</resources>

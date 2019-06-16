@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    android:orientation="vertical"
+    tools:context=".Profile">
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#8ED2EF">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo_white" />
+
+        <TextView
+            android:id="@id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="프로필"
+            android:gravity="center"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:background="#FFFFFF"
+        android:src="@drawable/myinfoprofileimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/changeName"
+        android:textColor="#000000"
+        android:text="기본적인 이름"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/chattedPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#323232"
+        android:textSize="20dp"
+        android:text="과거에 채팅한 사람들"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_oldChatted"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@color/cardview_dark_background"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:background="#E4E4E4"
+        android:layout_width="match_parent"
+        android:layout_height="3px"/>
+
+    <TextView
+        android:id="@+id/announce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#323232"
+        android:textSize="20dp"
+        android:text="공지"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_announce"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@color/cardview_dark_background"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+</LinearLayout>
