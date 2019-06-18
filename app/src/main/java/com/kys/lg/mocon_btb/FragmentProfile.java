@@ -1,17 +1,20 @@
 package com.kys.lg.mocon_btb;
 
-import android.graphics.Rect;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class Profile extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class FragmentProfile extends Fragment {
 
     private ArrayList<OldChatData> arrayList_oldOldChatData;
     private ArrayList<AnnounceData> arrayList_AnnounceData;
@@ -25,18 +28,25 @@ public class Profile extends AppCompatActivity {
     private LinearLayoutManager linearLayoutManager_oldchat;
     private LinearLayoutManager linearLayoutManager_announce;
 
+
+    public FragmentProfile() {
+        // Required empty public constructor
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        recyclerView_oldchat = (RecyclerView)findViewById(R.id.rv_oldChatted);
-        recyclerView_annaounce = (RecyclerView)findViewById(R.id.rv_announce);
+        ViewGroup rootview = (ViewGroup)inflater.inflate(R.layout.fragment_profile,container,false);
 
-        linearLayoutManager_oldchat = new LinearLayoutManager(this);
+        recyclerView_oldchat = (RecyclerView)rootview.findViewById(R.id.rv_oldChatted);
+        recyclerView_annaounce = (RecyclerView)rootview.findViewById(R.id.rv_announce);
+
+        linearLayoutManager_oldchat = new LinearLayoutManager(getActivity());
         recyclerView_oldchat.setLayoutManager(linearLayoutManager_oldchat);
 
-        linearLayoutManager_announce = new LinearLayoutManager(this);
+        linearLayoutManager_announce = new LinearLayoutManager(getActivity());
         recyclerView_annaounce.setLayoutManager(linearLayoutManager_announce);
 
         arrayList_oldOldChatData = new ArrayList<>();
@@ -48,5 +58,7 @@ public class Profile extends AppCompatActivity {
         profileAdapterOfAnnounce = new ProfileAdapterOfAnnounce(arrayList_AnnounceData);
         recyclerView_annaounce.setAdapter(profileAdapterOfAnnounce);
 
+        return rootview;
     }
+
 }

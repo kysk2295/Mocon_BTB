@@ -39,7 +39,7 @@ public class LibraryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v=inflater.inflate(R.layout.activity_main, container, false);
+        View v=inflater.inflate(R.layout.fragment_library, container, false);
 
         recyclerView=v.findViewById(R.id.recyclerview);
         niceSpinner = v.findViewById(R.id.spinner);
@@ -69,6 +69,7 @@ public class LibraryFragment extends Fragment {
 
         RecyclerViewAdapter(){
 
+            
         }
 
         @NonNull

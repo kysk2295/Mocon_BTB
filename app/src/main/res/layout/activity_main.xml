@@ -8,30 +8,32 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <LinearLayout
+
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_height="610dp">
 
-        <Button
-            android:layout_width="0dp"
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/btn1"/>
+            android:id="@+id/vp">
+        </android.support.v4.view.ViewPager>
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-    </LinearLayout>
+
+
+
+    </FrameLayout>
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bottom_navigationbar"
+        app:menu="@menu/menu"
+        app:itemIconTint="@color/selctor"
+        android:background="#FFFFFF">
+
+    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+
 
 
 
