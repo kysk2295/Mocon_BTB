@@ -3,6 +3,7 @@ package com.kys.lg.mocon_btb;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -50,6 +52,30 @@ public class FragmentSearchScreen extends Fragment {
         toolbar=rootView.findViewById(R.id.my_toolbar);
 
         searchView=rootView.findViewById(R.id.search_view);
+        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                searchView.setVisibility(View.GONE);
+                toolbar.setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+
+                searchView.clearFocus();
+                searchView.setQuery("",false);
+                searchView.setIconified(true);
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
 
 
         arrayList = new ArrayList<>();
@@ -58,6 +84,8 @@ public class FragmentSearchScreen extends Fragment {
         recyclerView.setAdapter(searchAdapter);
 
         MainActivity activity=(MainActivity) getActivity();
+        activity.setSupportActionBar(toolbar);
+        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         setHasOptionsMenu(true);
 
@@ -73,7 +101,7 @@ public class FragmentSearchScreen extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
+       // super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.toolbaritem,menu);
     }
 
@@ -83,11 +111,20 @@ public class FragmentSearchScreen extends Fragment {
 
         switch (item.getItemId()){
             case R.id.menu:
+                Snackbar.make(toolbar,"search",Snackbar.LENGTH_SHORT).show();
+                break;
+            case R.id.search:
+                Snackbar.make(toolbar,"search",Snackbar.LENGTH_SHORT).show();
+                toolbar.setVisibility(View.GONE);
+                searchView.setVisibility(View.VISIBLE);
+
+                break;
+
 
 
 
 
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 }

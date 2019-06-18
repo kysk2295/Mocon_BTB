@@ -10,10 +10,11 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="#ffffff"
         android:elevation="4dp"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:visibility="visible"/>
 
     <android.support.v7.widget.SearchView
        android:layout_width="match_parent"
